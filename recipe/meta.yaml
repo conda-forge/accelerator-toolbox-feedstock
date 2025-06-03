@@ -1,18 +1,18 @@
 {% set name = "accelerator-toolbox" %}
-{% set version = "0.6.1" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/accelerator_toolbox-{{ version }}.tar.gz
-  sha256: 9f4c67216634d20b07f8105ead471b7440c80151dfe81ad27538ea4adefdaa89
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/accelerator_toolbox-{{ version }}.tar.gz
+  sha256: a067bc23ce28594369206333d80ffd42372c6105b30a24030a2d3080d47047f3
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 3
-  skip: True  # [win32 or linux32]
+  number: 0
+  skip: true  # [win32 or linux32]
 
 requirements:
   build:
