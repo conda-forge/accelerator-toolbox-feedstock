@@ -1,5 +1,5 @@
 {% set name = "accelerator-toolbox" %}
-{% set version = "0.7.1" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/accelerator_toolbox-{{ version }}.tar.gz
-  sha256: a067bc23ce28594369206333d80ffd42372c6105b30a24030a2d3080d47047f3
+  sha256: a444de4257e0013c3850eafbd27d3327dc50dd03a7c4c58945259e81e63cc9d5
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
   skip: true  # [win32 or linux32]
 
 requirements:
@@ -33,6 +33,7 @@ requirements:
     - python
     - importlib-resources  # [py<39]
     - scipy >=1.4.0
+    - h5py >=3.0
     - matplotlib-base
 
 test:
