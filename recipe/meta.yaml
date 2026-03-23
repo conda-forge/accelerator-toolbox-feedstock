@@ -33,7 +33,7 @@ requirements:
     - python
     - importlib-resources  # [py<39]
     - scipy >=1.4.0
-    - h5py >= 3.0
+    - h5py >=3.0
     - matplotlib-base
 
 test:
