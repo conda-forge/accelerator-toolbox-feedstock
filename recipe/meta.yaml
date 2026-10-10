@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/accelerator_toolbox-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/accelerator_toolbox-{{ version }}.tar.gz
   sha256: a444de4257e0013c3850eafbd27d3327dc50dd03a7c4c58945259e81e63cc9d5
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   skip: true  # [win32 or linux32]
 
 requirements:
